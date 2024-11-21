@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class BankManagement {
     private ArrayList<Account> listAcc;
@@ -52,5 +53,9 @@ public class BankManagement {
             }
         }
 
+    }
+
+    public void sapXepList() {
+        listAcc.sort(Comparator.comparing(Account :: getSoTaiKhoan));
     }
 }

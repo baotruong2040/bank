@@ -55,6 +55,8 @@ public class Account {
         }else {
             soDu -= soTien +soTien*(0.5/100);
             list.add(new Transaction("Rut Tien", soTien ));
+            System.out.println("Rut thanh cong!");
+            System.out.println("So Du: "+soDu);
         }
 
     }

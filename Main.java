@@ -1,10 +1,12 @@
 import java.util.*;
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BankManagement bank = new BankManagement();
         int n;
         do {
+            
             int id;
             String name;
             double balance;
@@ -18,8 +20,10 @@ public class Main {
                 case 1:
                     System.out.print("Nhap id: ");
                     id = scanner.nextInt();
+                    scanner.nextLine();
                     System.out.print("Nhap ten: ");
                     name = scanner.nextLine();
+                    
                     System.out.print("Nhap so tien: ");
                     balance = scanner.nextDouble();
 
@@ -35,7 +39,7 @@ public class Main {
                     break;
                 case 3:
                     int i;
-                    String st;
+                    
                     System.out.println("1. Nap Tien");
                     System.out.println("2. Rut Tien");
                     i = scanner.nextInt();
@@ -55,12 +59,17 @@ public class Main {
                             id = scanner.nextInt();
                             System.out.print("Nhap so tien: ");
                             tien = scanner.nextDouble();
-                            bank.themGD(id, "Nap Tien", tien);
+                            bank.themGD(id, "Rut Tien", tien);
                             break;
                     }
                     break;
+                case 4 : 
+                    bank.sapXepList();
+                    bank.danhSachAcc();
+                    break;
             }
 
-        } while (n == 5);
+        } while (n != 5);
+        scanner.close();
     }
 }
